@@ -60,6 +60,8 @@ public class WordPressTest  {
 		//Wait for the new post button and add a post
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id(newPost)));
 		driver.findElementById(newPost).click();
+		
+		//Enter the title and content and save the blog post
 		driver.findElementById(postTitle).sendKeys("AppiumTest");
 		driver.findElementById(postContent).sendKeys("Description");
 		((AndroidDriver<MobileElement>) driver).pressKeyCode(AndroidKeyCode.BACK);
